@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
-const port = 3030;
+const port = process.env.PORT || 3030;
 require("dotenv").config();
 const routes = require("./routes/routes");
 const cors = require("cors");
@@ -9,7 +9,6 @@ const bodyParser = require("body-parser");
 // const multer = require("multer");
 
 const api = require('./routes/routes')
-
 
 app.use(cors());
 // app.use(express.urlencoded({ extended: false }));
@@ -36,5 +35,5 @@ app.get("/", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
+  console.log(`Example app listening at https://awaproject:${port}`);
 });
