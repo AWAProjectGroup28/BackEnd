@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
-const port = process.env.PORT || 3030;
+const port = 3030;
 require("dotenv").config();
 const routes = require("./routes/routes");
 const cors = require("cors");
@@ -35,5 +35,5 @@ app.get("/", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Example app listening at https://awaproject:${port}`);
+  console.log(`Example app listening at http://localhost:${port}`);
 });
